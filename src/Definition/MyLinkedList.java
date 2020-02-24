@@ -47,6 +47,23 @@ public class MyLinkedList<T> {
         return temp;
     }
 
+    //Method to fetch object one by one
+    public Node<T> getObject() {
+
+        Node<T> temp;
+
+        if (getIter() == null && getHead() == null) {
+            System.out.println("List is empty");
+            return null;
+        } else if (getIter() == null) {
+            setIter(getHead());
+            return null;
+        }
+        temp = getIter();
+        setIter(getIter().getNext());
+        return temp;
+    }
+
     //Helper method to check if linked list is empty or not
     public boolean isEmpty() {
         return head == null;
