@@ -36,4 +36,19 @@ public class MyLinkedList<T> {
         }
     }
 
+    //method to delete node from beginning
+    public Node<T> delete() {
+        if (isEmpty()) {
+            System.out.println("Underflow");
+            return null;
+        }
+        Node<T> temp = getHead();
+        setHead(getHead().getNext());
+        return temp;
+    }
+
+    //Helper method to check if linked list is empty or not
+    public boolean isEmpty() {
+        return head == null;
+    }
 }
