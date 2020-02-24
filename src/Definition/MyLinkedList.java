@@ -37,7 +37,7 @@ public class MyLinkedList<T extends Comparable<T>> {
     }
 
     //method to delete node from beginning
-    public Node<T> delete() {
+    public Node<T> delete(int position) {
         if (isEmpty()) {
             System.out.println("Underflow");
             return null;
