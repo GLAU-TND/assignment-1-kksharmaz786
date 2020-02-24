@@ -103,6 +103,15 @@ public class Menu {
             if (node.getData().getFirstName().compareTo(name) == 0)
                 counter++;
         }
+        System.out.println(counter + " match found!");
+        while (true) {
+            Node<Person> node = linkedList.getObject();
+            if (node == null)
+                break;
+            if (node.getData().getFirstName().compareTo(name) == 0)
+                System.out.println(node.getData());
+        }
+    }
     }
 
 
